@@ -10,9 +10,10 @@
               <h3>Student Info.</h3>
             </div>
             <div class="card-body">
-              <p class="mb-0"><strong class="pr-1">Student ID:</strong>321000001</p>
-              <p class="mb-0"><strong class="pr-1">Class:</strong>4</p>
-              <p class="mb-0"><strong class="pr-1">Section:</strong>A</p>
+              <p class="mb-0"><strong class="pr-1">Name:</strong><%= st_name %></p>
+              <p class="mb-0"><strong class="pr-1">Student ID:</strong><%= st_id %></p>
+              <p class="mb-0"><strong class="pr-1">Department:</strong><%= st_dept %></p>
+              <p class="mb-0"><strong class="pr-1">Contact:</strong><%= st_contact %></p>
             </div>
           </div>
         </div>
@@ -26,22 +27,47 @@
                 <tr>
                   <th width="30%">Roll</th>
                   <td width="2%" class="colon">:</td>
-                  <td>125</td>
+                  <td><%= st_id %></td>
                 </tr>
                 <tr>
-                  <th width="30%">Academic Year	</th>
+                  <th width="30%">Date of birth</th>
                   <td width="2%" class="colon">:</td>
-                  <td>2020</td>
+                  <td><%= st_dob %></td>
+                </tr>
+                <tr>
+                  <th width="30%">Date of joining </th>
+                  <td width="2%" class="colon">:</td>
+                  <td><%= st_doj %></td>
                 </tr>
                 <tr>
                   <th width="30%">Gender</th>
                   <td width="2%" class="colon">:</td>
-                  <td>Male</td>
+                  <td><%= st_gender %></td>
                 </tr>
                 <tr>
-                  <th width="30%">Religion</th>
+                  <th width="30%">Father's name</th>
                   <td width="2%" class="colon">:</td>
-                  <td>Group</td>
+                  <td><%= st_fathername %></td>
+                </tr>
+                <tr>
+                  <th width="30%">Mother's name</th>
+                  <td width="2%" class="colon">:</td>
+                  <td><%= st_mothername %></td>
+                </tr>
+                <tr>
+                  <th width="30%">Permanent address</th>
+                  <td width="2%" class="colon">:</td>
+                  <td><%= st_paddress %></td>
+                </tr>
+                <tr>
+                  <th width="30%">state</th>
+                  <td width="2%" class="colon">:</td>
+                  <td><%= st_state %></td>
+                </tr>
+                <tr>
+                  <th width="30%">Email</th>
+                  <td width="2%" class="colon">:</td>
+                  <td><%= st_mail %></td>
                 </tr>
                 <tr>
                   <th width="30%">blood</th>

@@ -1,3 +1,4 @@
+
 const express = require("express");
 const path = require("path");
 const bodyparse = require("body-parser");
@@ -63,6 +64,7 @@ router.post("/index.html", (req, res, next) => {
     });
   console.log(`userid:${userid} and passkey ${password}`);
 });
+
 
 // taking details from registration and redirecting to fill details
 router.post("/registration.html", (req, res, next) => {

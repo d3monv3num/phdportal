@@ -10,6 +10,7 @@ const app = express.Router();
 app.use(bodyparse.urlencoded({ extended: true }));
 
 // getting data from addform
+
 app.post("/addform.html", (req, res, next) => {
   const fname = req.body.fname;
   const lname = req.body.lname;
