@@ -1,0 +1,116 @@
+.mobile-topbar
+{
+	
+	background-color: #0A2647;
+
+}
+.navbar{
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+a{
+	    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+/*    font-weight: bold;*/
+    font-size: 1rem;
+    font-family: Inter-Bold;
+}
+/* a:hover
+{
+	color: ;
+} */
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #fff;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: #fff;
+        border: 0;
+    color: black;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+/*    color: #212529;*/
+    text-align: left;
+    list-style: none;
+/*    background-color: rgb(53, 53, 53);*/
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 0.25rem;
+}
+.student
+{
+	position: relative;
+	left:50rem;
+}
+.notice-board
+{
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right:20px;
+    /*border-style:solid;
+    border-width: 2px;*/
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    background-color: #FBE3E3;
+}
+
+.notice-board h3
+{
+    background-color:#B20600;
+    color: white;
+    border-radius: 5px;
+}
+.view-more
+{
+    width:68vw;
+    height:20vw ;
+        background-color:#B20600;
+/*        margin-left: 5px;*/
+        margin-top:10px;
+        margin-bottom:10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+  border-width: 1px;
+  border-radius: 5px;
+}
+.dropdown-menu-sw {
+    left: auto;
+    right: 0;
+}
+.view-more:hover
+{
+    color: black;
+}
+@media screen and (min-width:992px) {
+    .profile-option{
+        margin-left: 55vw;
+    }
+}
+@media screen and (min-width:1070px) {
+    .profile-option{
+        margin-left: 60vw;
+    }
+}
+@media screen and (min-width:1200px) {
+    .profile-option{
+        margin-left: 65vw;
+    }
+}

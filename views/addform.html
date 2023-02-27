@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<link rel="stylesheet" type="text/css" href="css/addformstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<h1>Registration Form</h1>
+		<form action="addform.html" method="POST">
+			<div class="row">
+				<div class="col-50">
+
+                    <!-- Name Div -->
+                    <div class="row">
+                        <div class="col-26">
+							<span class = "bold">Name</span>
+						</div>
+                        <div class="col-74"></div>
+					</div>
+
+                    <!-- First / Last Name -->
+					<div class="row">
+                        <div class="col-26">
+							<input type="radio" id="mr" name="gender" value="mr" required>
+							<label for="mr">Mr.</label>
+							<input type="radio" id="ms" name="gender" value="ms" required>
+							<label for="ms">Ms.</label>
+						</div>
+						<div class="col-37">
+							<input type="text" id="fname" name="fname" placeholder="First Name" required>
+						</div>
+						<div class="col-37">
+							<input type="text" id="lname" name="lname" placeholder="Last Name" required>
+						</div>
+					</div>
+
+                    <!-- Gender -->
+					<div class="row">
+						<div class="col-26">
+                            <span class="bold">Gender</span>
+                        </div>
+                        <div>
+							<input class="gender" type="radio" id="male" name="gender" value="male" required>
+							<label for="male">Male</label>
+							<input class="gender" type="radio" id="female" name="gender" value="female" required>
+							<label for="female">Female</label>
+							<input class="gender" type="radio" id="other" name="gender" value="other" required>
+							<label for="other">Other</label>
+						</div>
+					</div>
+
+                    <!-- Department Alloted -->
+                     <div class="row">
+                        <div class="col-26">
+                            <span class="bold">Department Alloted</span>
+                        </div>
+                        <div class="col-74">
+                            <select id="department" name="department" required>
+								<option value="physics" disabled selected>Select Dept</option>
+                                <option value="physics">Phyiscs</option>
+								<option value="Chemical Engineering">Chemical Engineering</option>
+                                <option value="Biotechnology">Biotechnology</option>
+								<option value="UIET">University Institute of Engineering and Technology</option>
+								<option value="Buisness admin">Business Administration</option>
+							</select>
+                        </div>
+                    </div>
+                    <!-- date of joining -->
+                    <div class="row">
+                            <div class="col-26">
+                                <span class="bold">Date of joining</span>
+                            </div>
+							<div class="col-74">
+                                <input type="date" id="dateofjoining" name="doj" required>
+                            </div>
+					</div>
+                    <!-- date of birth -->
+                    <div class="row">
+                        <div class="col-26">
+                            <span class="bold">Date of birth</span>
+                        </div>
+                        <div class="col-74">
+                            <input type="date" id="dateofbirth" name="dob" required>
+                        </div>
+                </div>
+                    <!-- Father -->
+					<div class="row">
+                            <div class="col-26">
+                                <span class="bold">Father's Name</span>
+                            </div>
+							<div class="col-74">
+                                <input type="text" id="fathername" name="fathername" required>
+                            </div>
+					</div>
+
+                    <!-- Mother -->
+                    <div class="row">
+                        <div class="col-26">
+                            <span class="bold">Mother's Name</span>
+                        </div>
+                        <div class="col-74">
+                            <input type="text" id="mothername" name="mothername" required>
+                        </div>
+                    </div>
+
+                    <!-- Registration Number -->
+                    <div class="row">
+                        <div class="col-63">
+                            <span class="bold">Registration Number (if any) of PU, Chandigarh
+                            </span>
+                        </div>
+                        <div class="col-37">
+                            <input type="text" id="id" name="id" required>
+                        </div>
+                    </div>
+                    
+                    <!-- Aadhar Number -->
+                    <div class="row">
+                        <div class="col-26">
+                            <span class="bold">Aadhar Number</span>
+                        </div>
+                        <div class="col-74">
+                            <input type="text" id="aadhar" name="aadhar" required>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Number -->
+                    <div class="row">
+                        <div class="col-26">
+                            <span class="bold">Mobile Number</span>
+                        </div>
+                        <div class="col-74">
+                            <input type="tel" id="mobile" name="mobile" required>
+                        </div>
+                    </div>
+
+                     <!-- Email ID -->
+                     <div class="row">
+                        <div class="col-26">
+                            <span class="bold">Email ID</span>
+                        </div>
+                        <div class="col-74">
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+				</div>
+
+                <!-- Second Half -->
+				<div class="col-50">
+
+                    <!-- Permanent Address -->
+                    <div class="row">
+                        <div class="col-26">
+							<span class = "bold">Permanent Address</span>     
+						</div>
+                        <div class="col-74">
+                            <input type="text" id="paddress1" name="paddress1" required>
+                        </div>
+					</div>
+                     <!-- Local Address -->
+                     <div class="row">
+                        <div class="col-26">
+							<span class = "bold">Local Address</span>     
+						</div>
+                        <div class="col-74">
+                            <input type="text" id="laddress1" name="laddress1" required>
+                        </div>
+					</div>
+                    <!-- password for login -->
+                    <div class="row">
+                        <div class="col-26">
+							<span class = "bold">Password for login</span>     
+						</div>
+                        <div class="col-74">
+                            <input type="text" id="loginpassword" name="loginpassword" required>
+                        </div>
+					</div>
+                     <!-- State -->
+                     <div class="row">
+                        <div class="col-26">
+                            <span class="bold">State</span>
+                        </div>
+                        <div class="col-74">
+                            <select id="state" name="state" required>
+								<option value="" disabled selected>Select State</option>
+								<option value="Andhra Pradesh">Andhra Pradesh</option>
+								<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+								<option value="Assam">Assam</option>
+								<option value="Bihar">Bihar</option>
+								<option value="Chhattisgarh">Chhattisgarh</option>
+								<option value="Goa">Goa</option>
+								<option value="Gujarat">Gujarat</option>
+								<option value="Haryana">Haryana</option>
+								<option value="Himachal Pradesh">Himachal Pradesh</option>
+								<option value="Jharkhand">Jharkhand</option>
+								<option value="Karnataka">Karnataka</option>
+								<option value="Kerala">Kerala</option>
+								<option value="Madhya Pradesh">Madhya Pradesh</option>
+								<option value="Maharashtra">Maharashtra</option>
+								<option value="Manipur">Manipur</option>
+								<option value="Meghalaya">Meghalaya</option>
+								<option value="Mizoram">Mizoram</option>
+								<option value="Nagaland">Nagaland</option>
+								<option value="Odisha">Odisha</option>
+								<option value="Punjab">Punjab</option>
+								<option value="Rajasthan">Rajasthan</option>
+								<option value="Sikkim">Sikkim</option>
+								<option value="Tamil Nadu">Tamil Nadu</option>
+								<option value="Telangana">Telangana</option>
+								<option value="Tripura">Tripura</option>
+								<option value="Uttar Pradesh">Uttar Pradesh</option>
+								<option value="Uttarakhand">Uttarakhand</option>
+								<option value="West Bengal">West Bengal</option>
+							</select>
+                        </div>
+                    </div>
+
+				</div>
+			</div>
+			<div class="row" id="submit">
+				<input class="submit-button" type="submit" value="Submit">
+			</div>
+		</form>
+	</div>
+</body>
+</html>

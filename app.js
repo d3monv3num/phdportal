@@ -1,17 +1,23 @@
 const express=require('express');
 const path=require('path');
 const routing=require('./controllers/routes/routing');
-const mongoConnect=require('./utils/database');
+const addstudent=require('./controllers/addstudent');
+const mongoConnect=require('./utils/database').mongoConnect;
 
 const app=express();
 const port=3000
 
+// viewing engine
+app.set('view engine','ejs');
 
 // hosting the static files, CSS, js, images
 app.use(express.static(path.join(__dirname,"public")))
 
 // routers
-app.use(routing)
+app.use(routing);
+
+// addstudentusingform
+app.use(addstudent);
 
 // incase if pagenotfound is reached
 app.use('/',(req,res,next)=>{
@@ -19,7 +25,7 @@ app.use('/',(req,res,next)=>{
 })
 
 // listening port
-mongoConnect(client=>{
-    console.log(client);
+mongoConnect(()=>{
+    console.log("database server connected");
     app.listen(port,()=>{console.log(`this app is listening to port:${port}`)})
 });

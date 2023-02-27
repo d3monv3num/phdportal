@@ -1,0 +1,134 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f1f1f1;
+	font-family: 'Poppins';
+	font-size: 22px;
+}
+
+.container {
+	background-color: #fff;
+	padding: 10px;
+	margin: 10px auto;
+	width: 98%;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 10px;
+}
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.gender{
+	margin-left: 50px;
+}
+.bold {
+	vertical-align: middle;
+	font-weight: 600;
+	font-size: 15px;
+}
+.col-50 {
+	width: 50%;
+	padding: 10px
+}
+.parent{
+	position: static;
+	width: 100%;
+}
+.col-26 {
+	width: 26%;
+	padding: 5px
+}
+
+.col-63 {
+	width: 63%;
+	padding: 5px
+}
+
+.col-74 {
+	width: 74%;
+	padding: 5px
+}
+
+.col-37 {
+	width: 37%;
+	padding: 5px
+}
+
+.col-50 label {
+font-size: 18px;
+/* display: block; */
+/* margin-bottom: 5px; */
+}
+
+.col-50 input[type=text],
+.col-50 input[type=email],
+.col-50 input[type=tel],
+.col-50 select {
+width: 100%;
+padding: 10px;
+/* margin-bottom: 20px; */
+border: none;
+border-radius: 9px;
+background-color: #f1f1f1;
+}
+
+.col-50 input[type=text]:focus,
+.col-50 input[type=email]:focus,
+.col-50 input[type=tel]:focus,
+.col-50 select:focus {
+background-color: #ddd;
+outline: none;
+}
+
+.col-50 input[type=submit] {
+background-color: #4CAF50;
+color: white;
+padding: 12px 20px;
+border: none;
+border-radius: 3px;
+cursor: pointer;
+}
+
+.col-50 input[type=submit]:hover {
+background-color: #45a049;
+}
+
+@media screen and (max-width: 600px) {
+.col-50 {
+width: 100%;
+}
+}
+
+#submit{
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+}
+.submit-button {
+	font-weight: 600;
+	background-color: #ea7773;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.submit-button:hover {
+	background-color: #B20600;
+}
