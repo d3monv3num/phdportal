@@ -26,9 +26,9 @@ app.post('/addform.html',(req,res,next)=>{
     const laddress1=req.body.laddress1;
     const state=req.body.state;
     const loginpassword=req.body.loginpassword;
-
+    const type='student';
     // new instance of student
-    const new_student=new student(fname,lname,gender,department,doj,dob,fathername,mothername,id,aadhar,mobile,email,paddress1,laddress1,state,loginpassword);
+    const new_student=new student(fname,lname,gender,department,doj,dob,fathername,mothername,id,aadhar,mobile,email,paddress1,laddress1,state,loginpassword,type);
     
     // connect to database pool
     const db=getDB();
@@ -38,13 +38,13 @@ app.post('/addform.html',(req,res,next)=>{
             console.log(`student exists as the following ${existinstudent}`);
             res.sendFile(path.join(__dirname,"..","views","index.html"));
         }else{
-            res.render('dashboard');
+            res.sendFile(path.join(__dirname,"..","views","index.html"));
             new_student.save()
             .then(result=>{
                 console.log('student added in DB');
             }).catch(err=>{
                 console.log(`student not added due to error ${err}`);
-            });res.render('dashboard');
+            });
         }return existinstudent;
     }).catch(err=>{
         console.log(err);

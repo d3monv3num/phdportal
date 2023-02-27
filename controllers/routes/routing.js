@@ -55,15 +55,22 @@ router.post('/index.html',(req,res,next)=>{
             if(studentrecord==null){
                 // user not found
                 res.sendFile(path.join(__dirname,'..','..','views','index.html'));
-            }else res.render('dashboard',{
+            }else if(studentrecord.type=='student')res.render('dashboard',{
                 st_fname:studentrecord.fname,
                 st_name:studentrecord.fname+' '+studentrecord.lname,
                 st_id:studentrecord.id,
                 st_dept:studentrecord.department,
                 st_contact:studentrecord.mobile,
                 st_mail:studentrecord.email
-            });//user found
-            return studentrecord;  
+            });//user found and is student
+            else res.render('admin_dashboard.ejs',{
+                st_fname:studentrecord.fname,
+                st_name:studentrecord.fname+' '+studentrecord.lname,
+                st_id:studentrecord.id,
+                st_dept:studentrecord.department,
+                st_contact:studentrecord.mobile,
+                st_mail:studentrecord.email
+            });return studentrecord;  
     }).catch(err=>{
         console.log(err);
         res.sendFile(path.join(__dirname,'..','..','views','index.html'));

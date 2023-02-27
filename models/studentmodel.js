@@ -5,7 +5,7 @@ const hashfunction=require('./hashfunctionmodel').hashfunction;
 
 class student{
     // parameters are input from the form filled by student during registration
-    constructor(fname,lname,gender,department,doj,dob,fathername,mothername,id,aadhar,mobile,email,paddress1,laddress1,state,loginpassword){
+    constructor(fname,lname,gender,department,doj,dob,fathername,mothername,id,aadhar,mobile,email,paddress1,laddress1,state,loginpassword,type){
         this.fname=fname;
         this.lname=lname;
         this.gender=gender;
@@ -22,6 +22,7 @@ class student{
         this.laddress1=laddress1;
         this.state=state;
         this.loginpassword=hashfunction(loginpassword);
+        this.type=type;
     }
     save(){
         const db=getDB();
