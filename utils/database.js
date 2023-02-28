@@ -7,7 +7,7 @@ let db;
 const mongoConnect=(callback=>{
     MongoClient.connect('mongodb+srv://Chulbul:uiet123@cluster0.o92arat.mongodb.net/studentrecord?w=majority')
     .then(client=>{
-        console.log("Connected to database");
+        console.log("Connected to database from (database.js)");
         db=client.db();
         callback();
     }).

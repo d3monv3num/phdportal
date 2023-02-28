@@ -1,8 +1,8 @@
 const express=require('express')
 const path=require('path')
 const bodyparse=require('body-parser')
-const getDB=require('../../utils/database').getDB;
-const hashfunction=require('../../models/hashfunctionmodel').hashfunction;
+const getDB=require('../utils/database').getDB;
+const hashfunction=require('../models/hashfunctionmodel').hashfunction;
 const router=express.Router()
 let student_details;
 
@@ -11,13 +11,13 @@ router.use(bodyparse.urlencoded({extended:true}));
 
 
 router.get('/',(req,res,next)=>{
-    res.sendFile(path.join(__dirname,"..","..","views","index.html"))
+    res.sendFile(path.join(__dirname,"..","views","index.html"))
 })
 router.get('/index.html',(req,res,next)=>{
-    res.sendFile(path.join(__dirname,"..","..","views","index.html"))
+    res.sendFile(path.join(__dirname,"..","views","index.html"))
 })
 router.get('/registration.html',(req,res,next)=>{
-    res.sendFile(path.join(__dirname,"..","..","views","registration.html"))
+    res.sendFile(path.join(__dirname,"..","views","registration.html"))
 })
 router.get('/personal_details',(req,res,next)=>{
     res.render('personal_details',{
@@ -38,7 +38,7 @@ router.get('/personal_details',(req,res,next)=>{
     })
 })
 router.get('/addform',(req,res,next)=>{
-    res.sendFile(path.join(__dirname,"..","..","views","addform.html"));
+    res.sendFile(path.join(__dirname,"..","views","addform.html"));
 })
 
 
@@ -54,7 +54,7 @@ router.post('/index.html',(req,res,next)=>{
             console.log(studentrecord);
             if(studentrecord==null){
                 // user not found
-                res.sendFile(path.join(__dirname,'..','..','views','index.html'));
+                res.sendFile(path.join(__dirname,'..','views','index.html'));
             }else if(studentrecord.type=='student')res.render('dashboard',{
                 st_fname:studentrecord.fname,
                 st_name:studentrecord.fname+' '+studentrecord.lname,
@@ -73,7 +73,7 @@ router.post('/index.html',(req,res,next)=>{
             });return studentrecord;  
     }).catch(err=>{
         console.log(err);
-        res.sendFile(path.join(__dirname,'..','..','views','index.html'));
+        res.sendFile(path.join(__dirname,'..','views','index.html'));
     }
     );
     console.log(`userid:${userid} and passkey ${password}`);
@@ -84,7 +84,7 @@ router.post('/registration.html',(req,res,next)=>{
     const enrollmentno=req.body.enrollment_no;
     const mailid=req.body.emailid;
     console.log(`enrollmentnumber: ${enrollmentno}`);
-    res.sendFile(path.join(__dirname,"..","..","views","addform.html"));
+    res.sendFile(path.join(__dirname,"..","views","addform.html"));
 })
 
 module.exports=router

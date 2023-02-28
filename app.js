@@ -1,6 +1,6 @@
 const express=require('express');
 const path=require('path');
-const routing=require('./controllers/routes/routing');
+const routing=require('./routes/routing');
 const addstudent=require('./controllers/addstudent');
 const mongoConnect=require('./utils/database').mongoConnect;
 
@@ -26,6 +26,6 @@ app.use('/',(req,res,next)=>{
 
 // listening port
 mongoConnect(()=>{
-    console.log("database server connected");
+    console.log("database server connected (from app.js)");
     app.listen(port,()=>{console.log(`this app is listening to port:${port}`)})
 });
