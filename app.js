@@ -3,6 +3,8 @@ const path=require('path');
 const routing=require('./routes/routing');
 const addstudent=require('./controllers/addstudent');
 const mongoConnect=require('./utils/database').mongoConnect;
+const session=require('express-session');
+
 
 const app=express();
 const port=3000
@@ -12,6 +14,9 @@ app.set('view engine','ejs');
 
 // hosting the static files, CSS, js, images
 app.use(express.static(path.join(__dirname,"public")))
+
+// session configuration
+app.use(session({secret:'anotherdream', resave:false, saveUninitialized:false}))
 
 // routers
 app.use(routing);
