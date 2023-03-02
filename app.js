@@ -2,11 +2,25 @@ const express=require('express');
 const path=require('path');
 const routing=require('./routes/routing');
 const addstudent=require('./controllers/addstudent');
+const session=require('express-session');
 const mongoConnect=require('./utils/database').mongoConnect;
+const mongodbstore=require('connect-mongodb-session')(session);
+const loginroute=require('./routes/loginroute');
+const personal_details=require('./routes/personaldetailsroute');
 
 const app=express();
 const port=3000
+const store=new mongodbstore({
+    uri:'mongodb+srv://Chulbul:uiet123@cluster0.o92arat.mongodb.net/studentrecord?w=majority',
+    collection:'sessions'
+})
 
+app.use(session({
+    secret:'workingdreams',
+    resave:false,
+    saveUninitialized:false,
+    store:store
+}))
 // viewing engine
 app.set('view engine','ejs');
 
@@ -15,6 +29,8 @@ app.use(express.static(path.join(__dirname,"public")))
 
 // routers
 app.use(routing);
+app.use(loginroute);
+app.use(personal_details);
 
 // addstudentusingform
 app.use(addstudent);
