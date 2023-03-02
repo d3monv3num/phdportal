@@ -1,12 +1,10 @@
 const express=require('express');
+const mongoConnect=require('./utils/database').mongoConnect;
+const session=require('express-session');
+const mongodbstore=require('connect-mongodb-session')(session);
 const path=require('path');
 const routing=require('./routes/routing');
 const addstudent=require('./controllers/addstudent');
-const session=require('express-session');
-const mongoConnect=require('./utils/database').mongoConnect;
-const session=require('express-session');
-const { Collection } = require('mongoose');
-const mongodbstore=require('connect-mongodb-session')(session);
 const loginroute=require('./routes/loginroute');
 const personal_details=require('./routes/personaldetailsroute');
 
