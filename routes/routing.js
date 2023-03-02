@@ -1,5 +1,6 @@
 const express=require('express')
 const path=require('path')
+const auth_function=require('../controllers/sessionauthenticator').auth_function;
 const bodyparse=require('body-parser')
 const getDB=require('../utils/database').getDB;
 const hashfunction=require('../models/hashfunctionmodel').hashfunction;
@@ -41,6 +42,7 @@ router.get('/addform',(req,res,next)=>{
     res.sendFile(path.join(__dirname,"..","views","addform.html"));
 })
 router.get('/docupload',(req,res,next)=>{
+
     res.render('docupload',{
         st_fname:student_details.fname,
         st_name:student_details.fname+' '+student_details.lname,
@@ -51,7 +53,7 @@ router.get('/docupload',(req,res,next)=>{
     });
 })
 router.get('/get_dash',(req,res,next)=>{
-    req.session.isloggedin=true;
+
     res.render('dashboard',{
         st_fname:student_details.fname,
         st_name:student_details.fname+' '+student_details.lname,

@@ -4,9 +4,15 @@ const routing=require('./routes/routing');
 const addstudent=require('./controllers/addstudent');
 const mongoConnect=require('./utils/database').mongoConnect;
 const session=require('express-session');
+const { Collection } = require('mongoose');
+const mongodbstore=require('connect-mongodb-session')(session);
 
 
 const app=express();
+const store_session= new mongodbstore({
+    uri:'mongodb+srv://Chulbul:uiet123@cluster0.o92arat.mongodb.net/studentrecord?w=majority',
+    Collection:'sessions'
+})
 const port=3000
 
 // viewing engine
@@ -16,7 +22,12 @@ app.set('view engine','ejs');
 app.use(express.static(path.join(__dirname,"public")))
 
 // session configuration
-app.use(session({secret:'anotherdream', resave:false, saveUninitialized:false}))
+app.use(session({
+    secret:'anotherdream',
+    resave:false,
+    saveUninitialized:false,
+    store:store_session,
+}));
 
 // routers
 app.use(routing);

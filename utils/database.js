@@ -2,7 +2,6 @@ const mongodb=require('mongodb');
 const MongoClient=mongodb.MongoClient;
 // database variable (line 19)
 let db;
-
 // making the connection to the server
 const mongoConnect=(callback=>{
     MongoClient.connect('mongodb+srv://Chulbul:uiet123@cluster0.o92arat.mongodb.net/studentrecord?w=majority')
