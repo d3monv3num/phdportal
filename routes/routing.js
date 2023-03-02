@@ -1,5 +1,6 @@
 const express=require('express')
 const path=require('path')
+const auth_function=require('../controllers/sessionauthenticator').auth_function;
 const bodyparse=require('body-parser')
 const getDB=require('../utils/database').getDB;
 const hashfunction=require('../models/hashfunctionmodel').hashfunction;

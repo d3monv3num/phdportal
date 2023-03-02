@@ -1,0 +1,187 @@
+.navbar-brand small {
+  display: block;
+  font-size: 12px;
+}
+
+.navbar-toggle {
+  top: 10px
+}
+
+@media (min-width:768px) {
+
+  .navbar-brand {
+    padding-top: 20px;
+  }
+
+  .nav.navbar-nav a {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+}
+.ms-auto{
+  margin-right: 20px;
+}
+
+.A1 {
+
+  display: inline;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.a {
+  display: inline-block;
+  /* text-align: center; */
+  border: 10px solid;
+  display: inline-block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  /* background-color: #fff; */
+  border-radius: 1rem;
+  /* border: 1px solid rgb(218, 220, 224); */
+  background-color: rgb(237, 237, 237);
+  border: none;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 20px;
+
+  flex-direction: column;
+  width: 350px;
+  height: 150px;
+
+
+}
+
+input[type='file'] {
+  color: transparent;
+  }
+
+.box label{
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.inBox{
+  margin: 20px;
+  margin-top: 15px;
+}
+body {
+  background-color: #fff(195, 213, 197);
+  margin-bottom: 40px;
+}
+
+/* .bw {
+  width: 50px;
+  height: 400px;
+  display: inline-block;
+} */
+
+.bi {
+  border-radius: 100%;
+  margin-left: 70px;
+  margin-top: 40px;
+
+}
+
+.heading {
+  font-family: Arial, Helvetica, sans-serif;
+
+  flex: 1;
+  font-weight: bolder;
+  font-size: large;
+  margin-left: 20px;
+  margin-top: 10px;
+
+}
+
+hr {
+  color: rgb(216, 216, 216);
+
+}
+
+.innerimg {
+  height: 50px;
+  width: 50px;
+  float: right;
+  margin-right: 15px;
+  margin-top: 15px;
+  /* background-color: #fff; */
+
+}
+
+.innertext {
+  font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+  margin-left: 20px;
+  color: rgb(60, 64, 67);
+  display: inline-block;
+
+
+}
+
+.leftbox {
+  position: relative;
+  margin-top: 30px;
+  margin-left: 65px;
+  float: left;
+  background-color: #FBE3E3;
+  border-radius: 1rem;
+  border: solid #C00021;
+  width: 19.5%;
+  height: 300px;
+  
+}
+
+
+.name {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px 70px;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.pi {
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-weight: bolder;
+  font-size: x-large;
+  margin-left: 22px;
+
+}
+
+.rightbox {
+
+  display: inline;
+  height: 500px;
+  width: 72%;
+  float: right;
+
+}
+
+.so {
+
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 20px;
+  margin-left: 1000px;
+}
+
+.logo{
+  margin:10px 10px 10px 20px ;
+}
+
+div.upload {
+  width: 130px;
+  height: 40px;
+  background: url(https://lh6.googleusercontent.com/-dqTIJRTqEAQ/UJaofTQm3hI/AAAAAAAABHo/w7ruR1SOIsA/s157/upload.png);
+  background-size:contain;
+  background-repeat: no-repeat;
+}
+
+div.upload input {
+  display: block !important;
+  width: 130px !important;
+  height: 40px !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+}
