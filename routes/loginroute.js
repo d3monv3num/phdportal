@@ -4,7 +4,6 @@ const bodyparse=require('body-parser')
 const getDB=require('../utils/database').getDB;
 const hashfunction=require('../models/hashfunctionmodel').hashfunction;
 const router=express.Router()
-let student_details;
 
 // bodyparser to take input from forms
 router.use(bodyparse.urlencoded({extended:true}));

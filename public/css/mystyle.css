@@ -47,7 +47,7 @@ body {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
 }
 
-a {
+.nav-link{
   color: #fff;
   text-decoration: none;
   background-color: transparent;
@@ -73,7 +73,10 @@ a {
   border: 0;
   color: black;
 }
-
+.view-more{
+  color: white;
+  text-decoration: none;
+}
 .dropdown-menu {
   position: absolute;
   top: 100%;

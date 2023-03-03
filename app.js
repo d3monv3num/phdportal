@@ -6,8 +6,12 @@ const path=require('path');
 const routing=require('./routes/routing');
 const addstudent=require('./controllers/addstudent');
 const loginroute=require('./routes/loginroute');
+const dashboardroute=require('./routes/dashboardroute');
 const personal_details=require('./routes/personaldetailsroute');
+const doc_upload=require('./routes/docuploadroute');
+const syllabus=require('./routes/syllabusroute');
 
+const anhour=60*60*1000;
 const app=express();
 const store_session= new mongodbstore({
     uri:'mongodb+srv://Chulbul:uiet123@cluster0.o92arat.mongodb.net/studentrecord?w=majority',
@@ -19,14 +23,18 @@ const store=new mongodbstore({
     collection:'sessions'
 })
 
+// session configurations
 app.use(session({
     secret:'workingdreams',
     resave:false,
     saveUninitialized:false,
+    cookie:{maxAge:anhour},
     store:store
 }))
+
 // viewing engine
 app.set('view engine','ejs');
+
 
 // hosting the static files, CSS, js, images
 app.use(express.static(path.join(__dirname,"public")))
@@ -43,6 +51,10 @@ app.use(session({
 app.use(routing);
 app.use(loginroute);
 app.use(personal_details);
+app.use(dashboardroute);
+app.use(doc_upload);
+app.use(syllabus);
+
 
 // addstudentusingform
 app.use(addstudent);
