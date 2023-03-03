@@ -2,7 +2,9 @@
   display: block;
   font-size: 12px;
 }
-
+.leftboxtext{
+  margin-left: 10px;
+}
 .navbar-toggle {
   top: 10px
 }
