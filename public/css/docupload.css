@@ -1,63 +1,118 @@
-.navbar-brand small {
-  display: block;
-  font-size: 12px;
-}
-.leftboxtext{
-  margin-left: 10px;
-}
-.navbar-toggle {
-  top: 10px
-}
-
-@media (min-width:768px) {
-
-  .navbar-brand {
-    padding-top: 20px;
-  }
-
-  .nav.navbar-nav a {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
+.topbar
+{
+	
+	background-color: #0A2647;
 
 }
-.ms-auto{
-  margin-right: 20px;
+.navbar{
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+.profile_img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 10px auto;
+  border: 10px solid #B20600;
+  border-radius: 100%;
+}
+.topbar a{
+	    color: black;
+    text-decoration: none;
+    background-color: transparent;
+/*    font-weight: bold;*/
+    font-size: 1.1rem;
+    font-family: Inter-Bold;
+}
+/* a:hover
+{
+	color: ;
+} */
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #fff;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: #fff;
+        border: 0;
+    color: black;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+/*    color: #212529;*/
+    text-align: left;
+    list-style: none;
+/*    background-color: rgb(53, 53, 53);*/
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 0.5rem;
 }
 
-.A1 {
-
-  display: inline;
-  margin-top: 50px;
-  margin-left: 50px;
+.student
+{
+	position: relative;
+	left:50rem;
 }
 
+
+.dropdown-menu-sw {
+    left: auto;
+    right: 0;
+}
+@media screen and (min-width:992px) {
+    .profile-option{
+        margin-left: 55vw;
+    }
+
+.dropdown-menu:before
+{
+    position:absolute;
+    content: '';
+    height: 13px;
+    width: 13px;
+    background-color:#fff;
+/*    right: 16px;*/
+    left: 137px;
+   top:-7px;
+   transform: rotate(45deg);
+
+
+ }
+}
 .a {
   display: inline-block;
   /* text-align: center; */
-  border: 10px solid;
+/*  border: 10px solid;*/
   display: inline-block;
   flex-grow: 1;
   flex-shrink: 1;
   /* background-color: #fff; */
   border-radius: 1rem;
   /* border: 1px solid rgb(218, 220, 224); */
-  background-color: rgb(237, 237, 237);
-  border: none;
+  background-color: #D3D3D3;
+/*  border: solid #C00021;*/
   box-sizing: border-box;
   overflow: hidden;
-  margin: 20px;
+  margin: 15px;
 
   flex-direction: column;
-  width: 350px;
+  width: 320px;
   height: 150px;
 
 
 }
-
-input[type='file'] {
-  color: transparent;
-  }
 
 .box label{
   margin-top: 15px;
@@ -68,11 +123,28 @@ input[type='file'] {
   margin: 20px;
   margin-top: 15px;
 }
-body {
-  background-color: #fff(195, 213, 197);
-  margin-bottom: 40px;
+/*input[type=file]::file-selector-button
+{
+    background-color:#343434;
+    color: white;
+}*/
+input[type=file]{
+  color: transparent;
+}
+input[type=file]::file-selector-button {
+/*  border: 2px solid #6c5ce7;*/
+color: white;
+  padding: .2em .4em;
+  border-radius: .2em;
+  background-color:#343434;
+  transition: 1s;
 }
 
+input[type=file]::file-selector-button:hover {
+  background-color:#4F4F4F;
+  color: white;
+/*  border: 2px solid #00cec9;*/
+}
 /* .bw {
   width: 50px;
   height: 400px;
@@ -98,7 +170,7 @@ body {
 }
 
 hr {
-  color: rgb(216, 216, 216);
+  color: grey;
 
 }
 
@@ -123,14 +195,13 @@ hr {
 
 .leftbox {
   position: relative;
-  margin-top: 30px;
+  margin-top: 75px;
   margin-left: 65px;
   float: left;
-  background-color: #FBE3E3;
+  background-color: #f4c2c2;
   border-radius: 1rem;
   border: solid #C00021;
-  width: 19.5%;
-  height: 300px;
+  width: 18%;
   
 }
 
@@ -153,7 +224,7 @@ hr {
 
 .rightbox {
 
-  display: inline;
+  display: flex;
   height: 500px;
   width: 72%;
   float: right;
@@ -171,19 +242,91 @@ hr {
 .logo{
   margin:10px 10px 10px 20px ;
 }
+ .student-profile .card {
+    border-radius: 10px;
+    background-color: #f4c2c2;
+    border:solid #C00021;
 
-div.upload {
-  width: 130px;
-  height: 40px;
-  background: url(https://lh6.googleusercontent.com/-dqTIJRTqEAQ/UJaofTQm3hI/AAAAAAAABHo/w7ruR1SOIsA/s157/upload.png);
-  background-size:contain;
-  background-repeat: no-repeat;
+  }
+  
+  .student-profile .card .card-header .profile_img {
+/*    width: 150px;*/
+    height: 150px;
+    object-fit: cover;
+    margin: 10px auto;
+    border: 10px solid #C00021;
+    border-radius: 100%;
+  }
+  
+  .student-profile .card h3 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .student-profile .card p {
+    font-size: 16px;
+    color: #000;
+  }
+  .flex-container
+  {
+    display: flex;
+    padding: 30px;
+    flex-wrap:nowrap;
+  }
+.flex-item-1
+{
+    align-self: center;
+    margin-right: 50px;
+    flex-basis: 300px;
 }
 
-div.upload input {
-  display: block !important;
-  width: 130px !important;
-  height: 40px !important;
-  opacity: 0 !important;
-  overflow: hidden !important;
+@media screen and (max-width:600px) {
+  .flex-container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .a{
+    margin-left: 0;
+    width: 72vw;
+    font-size: 3.5vw;
+  }
 }
+@media screen and (min-width:1070px) {
+    .profile-option{
+        margin-left: 60vw;
+    }
+    .dropdown-menu:before
+{
+    position:absolute;
+    content: '';
+    height: 13px;
+    width: 13px;
+    background-color: #fff;
+/*    right: 16px;*/
+    left: 137px;
+   top:-7px;
+   transform: rotate(45deg);
+
+
+ }
+}
+@media screen and (min-width:1200px) {
+    .profile-option{
+        margin-left: 65vw;
+    }
+    .dropdown-menu:before
+{
+    position:absolute;
+    content: '';
+    height: 13px;
+    width: 13px;
+    background-color: #fff;
+/*    right: 16px;*/
+    left: 137px;
+   top:-7px;
+   transform: rotate(45deg);
+
+
+ }
+}
+
