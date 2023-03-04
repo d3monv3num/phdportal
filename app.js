@@ -11,7 +11,7 @@ const personal_details=require('./routes/personaldetailsroute');
 const doc_upload=require('./routes/docuploadroute');
 const syllabus=require('./routes/syllabusroute');
 
-const anhour=60*60*1000;
+const anhour=1*60*60*1000;
 const app=express();
 const store_session= new mongodbstore({
     uri:'mongodb+srv://Chulbul:uiet123@cluster0.o92arat.mongodb.net/studentrecord?w=majority',
@@ -26,9 +26,9 @@ const store=new mongodbstore({
 // session configurations
 app.use(session({
     secret:'workingdreams',
+    cookie:{maxAge:anhour},
     resave:false,
     saveUninitialized:false,
-    cookie:{maxAge:anhour},
     store:store
 }))
 
