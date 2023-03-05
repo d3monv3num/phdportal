@@ -15,6 +15,17 @@
   border: 10px solid #B20600;
   border-radius: 100%;
 }
+.submit-button {
+	font-weight: 600;
+	background-color: #B20600;
+	color: white;
+	padding: 10px 18px;
+	border: none;
+  margin-top: 10px;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+}
 .topbar a{
 	    color: black;
     text-decoration: none;

@@ -7,7 +7,6 @@ const router=express.Router()
 // bodyparser to take input from forms
 router.use(bodyparse.urlencoded({extended:true}));
 
-
 router.get('/docupload',(req,res,next)=>{
     const db=getDB();
     const userid=req.session.userid;

@@ -5,6 +5,7 @@
            <!-- <div class="container"> -->
              <!-- <div class="row"> -->
                <!-- <div class="col-lg-4"> -->
+                <form action="#" method="post">
                  <div class="card shadow-sm" style="background-color: #FBE3E3;">
                    <div class="card-header bg-transparent text-center" style="border-bottom-width: 2px; border-color:#B20600;
    ">
@@ -17,6 +18,7 @@
                     <p class="mb-0"><strong class="pr-1">Department:</strong><%= st_dept %></p>
                     <p class="mb-0"><strong class="pr-1">Contact:</strong><%= st_contact %></p>
                     <p class="mb-0"><strong class="pr-1">Mail:</strong><%= st_mail %></p>
+                    <center><input class="submit-button" type="submit" value="submit"></center>
                    </div>
      </div>  <!-- <div class="bw"></div> -->
    </div>
@@ -24,26 +26,26 @@
        <div class="box">
          <div class="a"><img class="innerimg" src="images/id.png">
            <label class="img inBox">Upload Image</label>
-           <input type="file"  class="img inBox">
+           <input type="file" id="student_image" class="img inBox" value="student_image" name="student_image">
          </div>
          <div class="a"><img class="innerimg sign" src="images/sign.png">
            <label class="sig inBox">Upload Signature</label>
-           <input type="file" class="sig inBox">
+           <input type="file" class="sig inBox" value="student_signature" name="student_signature">
    
          </div>
          <div class="a"><img class="innerimg" src="images/pdf.png">
            <label class="project inBox">Upload project synopsis</label>
-           <input type="file" class="project inBox">
+           <input type="file" class="project inBox" value="student_synopsis" name="student_synopsis">
          </div>
          <div class="a"><img class="innerimg" src="images/pdf.png">
            <label class="pdf inBox">Upload file</label>
-           <input type="file" title=" " class="pdf inBox" />
+           <input type="file" title=" " class="pdf inBox" value="student_file1" name="student_file1" />
          </div>
          <div class="a"><img class="innerimg" src="images/pdf.png">
            <label class="pdf inBox">Upload file</label>
-           <input type="file" class="pdf inBox" />
+           <input type="file" class="pdf inBox" value="student_file2" name="student_file2"/>
          </div>
-   
+        </form>
        </div>
    
    </div>
