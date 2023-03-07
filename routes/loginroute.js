@@ -16,9 +16,6 @@ router.post('/index.html',(req,res,next)=>{
     const password=hashfunction(req.body.password);
     req.session.userid=userid;
     req.session.key=password;
-    const validatesession=db.collection('sessions').find({_id:req.sessionID}).next()
-    .then(result=>{
-        if(result!=null){
             const validatestudent=db.collection('studentrecord').find({id:userid,loginpassword:password})
             .next()
             .then(studentrecord=>{
@@ -49,15 +46,6 @@ router.post('/index.html',(req,res,next)=>{
                 console.log(err);
                 res.sendFile(path.join(__dirname,'..','views','index.html'));
             })
-        }else{
-            console.log(`no active session with sessionID ${req.sessionID}`);
-            res.sendFile(path.join(__dirname,'..','views','index.html'));
-        }
-    })
-    .catch(err=>{
-        console.log(`error on loginroute ${err}`);
-        res.sendFile(path.join(__dirname,'..','views','index.html'));
-    })
 });
 
 module.exports=router
