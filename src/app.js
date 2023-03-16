@@ -33,8 +33,8 @@ app.use(session({
 }))
 
 // viewing engine
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine','ejs');
-
 
 // hosting the static files, CSS, js, images
 app.use(express.static(path.join(__dirname,"public")))
