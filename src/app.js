@@ -3,13 +3,8 @@ const mongoConnect=require('./utils/database').mongoConnect;
 const session=require('express-session');
 const mongodbstore=require('connect-mongodb-session')(session);
 const path=require('path');
-const routing=require('./routes/routing');
 const addstudent=require('./controllers/addstudent');
-const loginroute=require('./routes/loginroute');
-const dashboardroute=require('./routes/dashboardroute');
-const personal_details=require('./routes/personaldetailsroute');
-const doc_upload=require('./routes/docuploadroute');
-const syllabus=require('./routes/syllabusroute');
+const routing_middleware=require('./middleware/routing_middleware');
 
 const anhour=1*60*60*1000;
 const app=express();
@@ -47,14 +42,8 @@ app.use(session({
     store:store_session,
 }));
 
-// routers
-app.use(routing);
-app.use(loginroute);
-app.use(personal_details);
-app.use(dashboardroute);
-app.use(doc_upload);
-app.use(syllabus);
-
+// routing middleware
+app.use(routing_middleware);
 
 // addstudentusingform
 app.use(addstudent);
