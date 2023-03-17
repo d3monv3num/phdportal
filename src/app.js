@@ -1,10 +1,10 @@
 const express=require('express');
-const mongoConnect=require('../config/utils/database').mongoConnect;
+const mongoConnect=require('./config/utils/database').mongoConnect;
 const session=require('express-session');
 const mongodbstore=require('connect-mongodb-session')(session);
 const path=require('path');
-const addstudent=require('./controllers/addstudent');
-const routing_middleware=require('./middleware/routing_middleware');
+const addstudent=require('./api/controllers/addstudent');
+const routing_middleware=require('./api/middleware/routing_middleware');
 
 const anhour=1*60*60*1000;
 const app=express();
@@ -28,11 +28,11 @@ app.use(session({
 }))
 
 // viewing engine
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname,'api', 'views'));
 app.set('view engine','ejs');
 
 // hosting the static files, CSS, js, images
-app.use(express.static(path.join(__dirname,"public")))
+app.use(express.static(path.join(__dirname,'api',"public")))
 
 // session configuration
 app.use(session({
