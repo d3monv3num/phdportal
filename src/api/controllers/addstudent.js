@@ -1,7 +1,8 @@
 const express=require('express');
 const path=require('path');
 const bodyparse=require('body-parser');
-const student=require('../models/studentmodel').student;
+const student=require('../models/studentmodel');
+const { hashfunction } = require('../models/hashfunctionmodel');
 const getDB=require('../../config/utils/database').getDB;
 const app=express.Router();
 
@@ -27,12 +28,30 @@ app.post('/addform.html',(req,res,next)=>{
     const state=req.body.state;
     const loginpassword=req.body.loginpassword;
     const type='student';
-    // new instance of student
-    const new_student=new student(fname,lname,gender,department,doj,dob,fathername,mothername,id,aadhar,mobile,email,paddress1,laddress1,state,loginpassword,type);
-    
-    // connect to database pool
-    const db=getDB();
-    const existing=db.collection('studentrecord').find({id:new_student.id}).next()
+
+    // filling out our schema with details of a new student
+
+    const new_student=new student({ 
+        fname:fname,
+        lname:lname,
+        gender:gender,
+        department:department,
+        doj:doj,
+        dob:dob,
+        fathername:fathername,
+        mothername:mothername,
+        id:id,
+        aadhar:aadhar,
+        mobile:mobile,
+        email:email,
+        paddress1:paddress1,
+        laddress1:laddress1,
+        state:state,
+        loginpassword:hashfunction(loginpassword),
+        enttype:type
+    });
+    new_student
+    .save()
     .then(existinstudent=>{
         if(existinstudent!=null){
             console.log(`student exists as the following ${existinstudent}`);

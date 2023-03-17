@@ -2,6 +2,7 @@ const express=require('express')
 const path=require('path')
 const bodyparse=require('body-parser');
 const getDB=require('../../config/utils/database').getDB;
+const student=require('../models/studentmodel');
 const router=express.Router()
 
 // bodyparser to take input from forms
@@ -15,7 +16,7 @@ router.get('/get_dash',(req,res,next)=>{
     const validatesession=db.collection('sessions').find({_id:req.sessionID}).next()
     .then(result=>{
         if(result!=null){
-            const validatestudent=db.collection('studentrecord').find({id:userid,loginpassword:password})
+            const validatestudent=student.find({id:userid,loginpassword:password}).cursor()
             .next()
             .then(studentrecord=>{
                 if(studentrecord==null){

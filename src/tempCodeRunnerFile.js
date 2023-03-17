@@ -1,0 +1,1 @@
+const mongoConnect=require('./config/utils/database').mongoConnect;

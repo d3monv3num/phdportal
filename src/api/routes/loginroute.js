@@ -1,7 +1,7 @@
 const express=require('express')
 const path=require('path')
 const bodyparse=require('body-parser')
-const getDB=require('../../config/utils/database').getDB;
+const student=require('../models/studentmodel');
 const hashfunction=require('../models/hashfunctionmodel').hashfunction;
 const router=express.Router()
 
@@ -11,17 +11,16 @@ router.use(bodyparse.urlencoded({extended:true}));
 
 // taking details from login and password and using them to find user 
 router.post('/index.html',(req,res,next)=>{
-    const db=getDB();
     const userid=req.body.userID;
     const password=hashfunction(req.body.password);
     req.session.userid=userid;
     req.session.key=password;
-            const validatestudent=db.collection('studentrecord').find({id:userid,loginpassword:password})
+            const validatestudent=student.find({id:userid,loginpassword:password}).cursor()
             .next()
             .then(studentrecord=>{
                 if(studentrecord==null){
                     res.sendFile(path.join(__dirname,'..','views','index.html'));
-                }else if(studentrecord.type=='student'){
+                }else if(studentrecord.enttype=='student'){
                     console.log(`loginroute is now working`);
                     res.render('dashboard',{
                         st_fname:studentrecord.fname,
