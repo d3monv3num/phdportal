@@ -1,5 +1,5 @@
 const express=require('express');
-const mongoConnect=require('./utils/database').mongoConnect;
+const mongoConnect=require('../config/utils/database').mongoConnect;
 const session=require('express-session');
 const mongodbstore=require('connect-mongodb-session')(session);
 const path=require('path');

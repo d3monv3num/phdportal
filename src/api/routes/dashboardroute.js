@@ -1,14 +1,14 @@
 const express=require('express')
 const path=require('path')
 const bodyparse=require('body-parser');
-const getDB=require('../utils/database').getDB;
+const getDB=require('../../config/utils/database').getDB;
 const router=express.Router()
 
 // bodyparser to take input from forms
 router.use(bodyparse.urlencoded({extended:true}));
 
 
-router.get('/syllabus',(req,res,next)=>{
+router.get('/get_dash',(req,res,next)=>{
     const db=getDB();
     const userid=req.session.userid;
     const password=req.session.key;
@@ -23,7 +23,7 @@ router.get('/syllabus',(req,res,next)=>{
                 }else{
                     const student_details=studentrecord;
                     console.log(`dash_board route is now in progress`);
-                    res.render('syllabus',{
+                    res.render('dashboard',{
                         st_fname:student_details.fname,
                         st_name:student_details.fname+' '+student_details.lname,
                         st_id:student_details.id,

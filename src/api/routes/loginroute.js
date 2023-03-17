@@ -1,7 +1,7 @@
 const express=require('express')
 const path=require('path')
 const bodyparse=require('body-parser')
-const getDB=require('../utils/database').getDB;
+const getDB=require('../../config/utils/database').getDB;
 const hashfunction=require('../models/hashfunctionmodel').hashfunction;
 const router=express.Router()
 

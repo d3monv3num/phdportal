@@ -1,4 +1,4 @@
-const getDB=require('../utils/database').getDB;
+const getDB=require('../../config/utils/database').getDB;
 const hashfunction=require('./hashfunctionmodel').hashfunction;
 // class template for student
 
