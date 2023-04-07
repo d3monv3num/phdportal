@@ -1,0 +1,45 @@
+<%- include('includes/admin_navbar.ejs') %>
+<link rel="stylesheet" type="text/css" href="css/new_notice_style.css">
+<form action="newnotice" method="POST">
+    <div class="create-notice-box">
+        <div class="create-notice-box-head">
+            <div class="notice-box-head-title">
+                New Notice
+            </div>
+            <div class="notice-box-head-buttons">
+                <button class="notice-head-button"><b>_</b></button>
+                <button class="notice-head-button"><b>l7</b></button>
+                <button class="notice-head-button"><b>x</b></button>
+            </div>
+        </div>
+        <div class="dept-selection">
+            <select id="department" name="department" required>
+                <option value="physics" disabled selected>Department</option>
+                <option value="physics">Phyiscs</option>
+                <option value="Chemical Engineering">Chemical Engineering</option>
+                <option value="Biotechnology">Biotechnology</option>
+                <option value="UIET">University Institute of Engineering and Technology</option>
+                <option value="Buisness admin">Business Administration</option>
+            </select>
+        </div>
+        <div class="notice-body">
+          <div class="notice-body-title">
+            <input class="notice-body-title-input" type="text" name="notice_head" id="notice_head" placeholder="Title" >
+          </div>
+            <div class="notice-body-box">
+                <textarea class="textarea1" name="notice_text" id="notice_text" cols="80" rows="8"></textarea>
+            </div>
+        </div>
+        <div class="bottom-buttons">
+          <div class="bottom-buttons-left">
+            <button class="notice-text-option"><b>B</b></button>
+            <button class="notice-text-option"><i>I</i></button>
+            <button class="notice-text-option"><u>U</u></button>
+          </div>
+          <div class="bottom-buttons-right">
+            <button class="notice-submit-button" type="submit" value="sumbit">Submit</button>
+          </div>
+        </div>
+    </div>
+</form>
+<%- include('includes/bottom.ejs') %>

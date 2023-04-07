@@ -1,9 +1,9 @@
+const path=require('path');
 const express=require('express');
 const mongoose=require('mongoose');
-const mongoConnect=require('./config/utils/database').mongoConnect;
 const session=require('express-session');
+const mongoConnect=require('./config/utils/database').mongoConnect;
 const mongodbstore=require('connect-mongodb-session')(session);
-const path=require('path');
 const addstudent=require('./api/controllers/addstudent');
 const routing_middleware=require('./api/middleware/routing_middleware');
 

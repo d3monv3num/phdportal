@@ -1,14 +1,82 @@
 <%- include('includes/admin_navbar.ejs') %>
 <!-- notice board -->
-<div class="notice-board">
-<center><h3>Notice Board</h3></center>
-<p>No post to display</p>
-<a href="#" class="view-more" aria-label="View More" title="View More">View More</a>
-</div>  
-
-
-
-
+<link rel="stylesheet" href="css/admin_dashboard.css">
+<div class="background_area"></div>
+<div class="content-collection">
+    <div class="left-column">
+        <div class="notice-heading">Notice</div>
+        <div class="notice-box">
+            <div class="notice-head">
+                <div class="notice-title">
+                    Notice 1
+                </div>
+                <button class="notice-dept">
+                    Department
+                </button>
+            </div>
+            <div class="notice-body">
+                Lorem ipsum dolor sit elit. Est itaque laboriosam exercitationem! Quibusdam voluptas adipisci ratione repellendus! Recusandae ut fugit cum? Dolorem.
+            </div>
+        </div>
+        <div class="notice-box">
+            <div class="notice-head">
+                <div class="notice-title">
+                    Notice 2
+                </div>
+                <button class="notice-dept">
+                    Department
+                </button>
+            </div>
+            <div class="notice-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est itaque laboriosam exercitationem! Quibusdam voluptas adipisci ratione repellendus! Recusandae 
+            </div>
+        </div>
+        <div class="notice-box">
+            <div class="notice-head">
+                <div class="notice-title">
+                    Notice 3
+                </div>
+                <button class="notice-dept">
+                    Department
+                </button>
+            </div>
+            <div class="notice-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est itaque laboriosam exercitationem! Quibusdam voluptas adipisci ratione repellendus! 
+            </div>
+        </div>
+    </div>
+    <div class="right-column">
+        <div class="content-card">
+            <div class="content-card-head">
+                <div class="content-card-header">Enrollment Details</div>
+            </div>
+            <div class="content-card-body">
+                <div class="content-card-box">
+                    <div class="content-card-box-head">Students</div>
+                    <div class="content-card-box-body">420</div>
+                </div>
+                <div class="content-card-box">
+                    <div class="content-card-box-head">Faculty</div>
+                    <div class="content-card-box-body">35</div>
+                </div>
+                <div class="content-card-box">
+                    <div class="content-card-box-head">Department</div>
+                    <div class="content-card-box-body">8</div>
+                </div>
+            </div>
+        </div>
+        <div class="content-card">
+            <div class="content-card-head">
+                <div class="content-card-header">Fees</div>
+            </div>
+        </div>
+        <div class="content-card">
+            <div class="content-card-head">
+                <div class="content-card-header">Results</div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- footer -->
 <div class="footer"></div>
 <%- include('includes/bottom.ejs') %>
