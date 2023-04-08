@@ -1,0 +1,336 @@
+:root{
+    --lightred:rgba(240, 128, 128, 0.37);
+    --lightred_hightlight:rgba(240, 128, 128, 0.48);
+    --content-margin:1rem;
+    --content-borderradius:0.16rem;
+}
+body {
+    /*    padding: 25px;*/
+    margin: 0px;
+    font-family: 'Lato', sans-serif;
+    color: #000;
+  }
+
+  .mobile-topbar {
+    background-color: #0A2647;
+  
+  }
+  
+  .navbar {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+  }
+  
+  .nav-link{
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+    /*    font-weight: bold;*/
+    font-size: 1.1rem;
+    font-family: Inter-Bold;
+  }
+  
+  /* a:hover
+  {
+    color: ;
+  } */
+  .dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #fff;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: #fff;
+    border: 0;
+    color: black;
+  }
+  .view-more{
+    color: white;
+    text-decoration: none;
+  }
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+    /*    color: #212529;*/
+    text-align: left;
+    list-style: none;
+    /*    background-color: rgb(53, 53, 53);*/
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 0.25rem;
+  }
+  
+  .student {
+    position: relative;
+    left: 50rem;
+  }
+  
+  .dropdown-menu-sw {
+    left: auto;
+    right: 0;
+  }
+  
+  .card {
+    position: relative;
+  
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+  
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+  
+    background-clip: border-box;
+    border: 2px solid #B20600;
+  
+  }
+  
+  tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-width: 2px;
+    border-style: solid;
+    border-image: initial;
+    border-color: #B20600;
+  }
+  
+  .colon {
+    font-weight: 1000;
+  }
+  
+  
+  .view-more {
+    /* width:68vw;
+      height:20vw ; */
+    background-color: #B20600;
+    /*        margin-left: 5px;*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-width: 1px;
+    border-radius: 5px;
+  }
+  
+  .dropdown-menu-sw {
+    left: auto;
+    right: 0;
+  }
+  
+  .view-more:hover {
+    color: black;
+  }
+  
+  .nav-item {
+    margin-right: 0.5vw;
+  }
+  .background-area{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/Gandhi_Bhavan_Chandigarh.jpg');
+    filter: blur(2px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+  .dashboard-content{
+    display: flex;
+  }
+  .left-column{
+    background-color: var(--lightred);
+    width: 20rem;
+    height: 25rem;
+    transition: 200ms all ease-in-out;
+    margin:1rem 0rem 0rem 2rem;
+    border-radius: 0.2rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5);
+  }
+  .student-info-card{
+    background-color: white;
+    width: 16rem;
+    height: 21rem;
+    margin: 2rem;
+    border-radius: 0.4rem;
+
+  }
+  .right-column{
+    width: 45rem;
+    transition: 200ms all ease-in;
+    height: 24rem;
+    background-color: var(--lightred);
+    margin:1rem 0rem 0rem 4rem;
+    border-radius: 0.2rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .3);
+  }
+  .right-column:hover{
+    background-color: var(--lightred_hightlight);
+  }
+  .left-column:hover{
+    background-color: var(--lightred_hightlight);
+  }
+  .student-info-card-head{
+    border-bottom:2px solid #B20600 ;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .student-info-card-body{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5rem;
+    margin-top: 1.5rem;
+  }
+  .notice-board-title{
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+  }
+  .notice-box{
+    background-color: white;
+    margin-left:var(--content-margin); 
+    margin-top: var(--content-margin);
+    border-radius: var(--content-borderradius);
+    height: 7.5rem;
+    width: 42rem;
+  }
+  .notice-head{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .3);
+  }
+  .notice-body{
+    margin-left: var(--content-margin);
+    margin-top:var(--content-margin);
+  }
+  .notice-title{
+    margin-left: var(--content-margin);
+  }
+  .viewmore-button{
+    border: none;
+    border-radius: 2rem;
+    width: 7rem;
+    height:2rem;
+    color: white;
+    margin-right: 1.55rem;
+    background-color: #0A2647;
+  }
+  .find-notice{
+    border: none;
+    margin-left: var(--content-margin);
+    width: 20rem;
+    border-radius:0.4rem 0rem 0rem 0.4rem;
+    height: 2rem;
+  }
+  .notice-bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--content-margin);
+  }
+  .finder{
+    display: flex;
+  }
+  .notice-search{
+    width: 5rem;
+    height: 2rem;
+    border: none;
+    color: white;
+    background-color:#0A2647;
+    border-radius:0 0.4rem 0.4rem 0;
+  }
+  input[type="text"]::placeholder{
+    text-align: center;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  @media screen and (max-width:768px) {
+  }
+  @media screen and (max-width:700px) {
+  }
+  @media screen and (max-width:500px) {
+  }
+  /* @media screen and (max-width:992px) {
+    .notice-board {
+      margin-top: 20px;
+      width: 70vw;
+      height: 22vh;
+      padding-top: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      background-color: #FBE3E3;
+    }
+  } */
+  
+  @media screen and (min-width:992px) {
+    .dropdown-menu:before {
+      position: absolute;
+      content: '';
+      height: 13px;
+      width: 13px;
+      background-color: #fff;
+      /*    right: 16px;*/
+      left: 137px;
+      top: -7px;
+      transform: rotate(45deg);
+  
+  
+    }
+  }
+  
+  @media screen and (min-width:1070px) {
+    .dropdown-menu:before {
+      position: absolute;
+      content: '';
+      height: 13px;
+      width: 13px;
+      background-color: #fff;
+      /*    right: 16px;*/
+      left: 137px;
+      top: -7px;
+      transform: rotate(45deg);
+    }
+  }
+  
+  @media screen and (min-width:1200px) {
+    .dropdown-menu:before {
+      position: absolute;
+      content: '';
+      height: 13px;
+      width: 13px;
+      background-color: #fff;
+      /*    right: 16px;*/
+      left: 137px;
+      top: -7px;
+      transform: rotate(45deg);
+  
+  
+    }
+  }

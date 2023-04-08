@@ -1,31 +1,54 @@
 <%- include('includes/navbar.ejs') %>
+<link rel="stylesheet" href="css/dashboard.css">
 <!-- notice board + profile-->
-<div class="student-profile py-4">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="card shadow-sm">
-            <div class="card-header bg-transparent text-center" style="border-bottom-width: 2px; border-color:#B20600;">
-              <img class="profile_img" src="images/profile_img.png" alt="profile icon">
-              <h3>Student Info.</h3>
-            </div>
-            <div class="card-body">
-              <p class="mb-0"><strong class="pr-1">Name:</strong><%= st_name %></p>
-              <p class="mb-0"><strong class="pr-1">Student ID:</strong><%= st_id %></p>
-              <p class="mb-0"><strong class="pr-1">Department:</strong><%= st_dept %></p>
-              <p class="mb-0"><strong class="pr-1">Contact:</strong><%= st_contact %></p>
-              <p class="mb-0"><strong class="pr-1">Mail:</strong><%= st_mail %></p>
-            </div>
-          </div>
+<div class="background-area">
+</div>
+<div class="dashboard-content">
+  <div class="left-column">
+    <div class="student-info-card">
+      <div class="student-info-card-head">
+        <img src="images/profile_img.png" class="card-image" alt="" style="width:90px; height: 90px;">
+      </div>
+      <div class="student-info-card-content">
+        <div class="student-info-card-body">
+          <p class="mb-0"><strong class="pr-1">Name:</strong><%= st_name %></p>
+          <p class="mb-0"><strong class="pr-1">Student ID:</strong><%= st_id %></p>
+          <p class="mb-0"><strong class="pr-1">Department:</strong><%= st_dept %></p>
+          <p class="mb-0"><strong class="pr-1">Contact:</strong><%= st_contact %></p>
+          <p class="mb-0"><strong class="pr-1">Mail:</strong><%= st_mail %></p>
         </div>
-        <!-- here -->
-        <div class="notice-board">
-          <center><h3>Notice Board</h3></center>
-          <p>No post to display</p>
-          <a href="#" class="view-more" aria-label="View More" title="View More">View More</a>
-          </div> 
       </div>
     </div>
   </div>
-  
+  <div class="right-column">
+    <div class="notice-board-title">Notice</div>
+    <div class="notice-box">
+            <div class="notice-head">
+                <div class="notice-title">
+                    Notice 1
+                </div>
+            </div>
+            <div class="notice-body">
+                Lorem ipsum dolor sit elit. Est itaque laboriosam exercitationem! Quibusdam voluptas adipisci ratione repellendus! Recusandae ut fugit cum? Dolorem. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+        </div>
+  <div class="notice-box">
+            <div class="notice-head">
+                <div class="notice-title">
+                    Notice 2
+                </div>
+            </div>
+            <div class="notice-body">
+                Lorem ipsum dolor sit elit. Est itaque laboriosam exercitationem! Quibusdam voluptas adipisci ratione repellendus! Recusandae ut fugit cum? Dolorem.
+            </div>
+        </div>
+        <div class="notice-bottom">
+          <div class="finder">
+            <input type="text" class="find-notice" name="findnotice" placeholder="Find Notice by Name/Content">
+            <button class="notice-search">Search</button>
+          </div>
+          <button class="viewmore-button">View More</button>
+        </div>
+  </div>
+</div>
 <%- include('includes/bottom.ejs') %>

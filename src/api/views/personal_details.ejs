@@ -1,84 +1,80 @@
 <%- include('includes/navbar.ejs') %>
-<div class="student-profile py-4">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="card shadow-sm">
-            <div class="card-header bg-transparent text-center" style="border-bottom-width: 2px; border-color:#B20600
-">
-              <img class="profile_img" src="images/profile_img.png" alt="profile icon">
-              <h3>Student Info.</h3>
-            </div>
-            <div class="card-body">
-              <p class="mb-0"><strong class="pr-1">Name:</strong><%= st_name %></p>
-              <p class="mb-0"><strong class="pr-1">Student ID:</strong><%= st_id %></p>
-              <p class="mb-0"><strong class="pr-1">Department:</strong><%= st_dept %></p>
-              <p class="mb-0"><strong class="pr-1">Contact:</strong><%= st_contact %></p>
-              <p class="mb-0"><strong class="pr-1">Mail:</strong><%= st_mail %></p>
-            </div>
+<link rel="stylesheet" href="css/personalpage_style.css">
+<div class="background-area">
+</div>
+<div class="dashboard-content">
+    <div class="left-column">
+      <div class="student-info-card">
+        <div class="student-info-card-head">
+          <img src="images/profile_img.png" class="card-image" alt="" style="width:90px; height: 90px;">
+        </div>
+        <div class="student-info-card-content">
+          <div class="student-info-card-body">
+            <p class="mb-0"><strong class="pr-1">Name:</strong><%= st_name %></p>
+            <p class="mb-0"><strong class="pr-1">Student ID:</strong><%= st_id %></p>
+            <p class="mb-0"><strong class="pr-1">Department:</strong><%= st_dept %></p>
+            <p class="mb-0"><strong class="pr-1">Contact:</strong><%= st_contact %></p>
+            <p class="mb-0"><strong class="pr-1">Mail:</strong><%= st_mail %></p>
           </div>
         </div>
-        <div class="col-lg-8">
-          <div class="card shadow-sm">
-            <div class="card-header bg-transparent border-0">
-              <h3 class="mb-0"><i class="far fa-clone pr-1"></i>General Information</h3>
-            </div>
-            <div class="card-body pt-0">
-              <table class="table table-bordered">
-                <tr>
-                  <th width="30%">Roll</th>
-                  <td width="2%" class="colon">:</td>
-                  <td><%= st_id %></td>
-                </tr>
-                <tr>
-                  <th width="30%">Date of birth</th>
-                  <td width="2%" class="colon">:</td>
-                  <td><%= st_dob %></td>
-                </tr>
-                <tr>
-                  <th width="30%">Date of joining </th>
-                  <td width="2%" class="colon">:</td>
-                  <td><%= st_doj %></td>
-                </tr>
-                <tr>
-                  <th width="30%">Gender</th>
-                  <td width="2%" class="colon">:</td>
-                  <td><%= st_gender %></td>
-                </tr>
-                <tr>
-                  <th width="30%">Father's name</th>
-                  <td width="2%" class="colon">:</td>
-                  <td><%= st_fathername %></td>
-                </tr>
-                <tr>
-                  <th width="30%">Mother's name</th>
-                  <td width="2%" class="colon">:</td>
-                  <td><%= st_mothername %></td>
-                </tr>
-                <tr>
-                  <th width="30%">Permanent address</th>
-                  <td width="2%" class="colon">:</td>
-                  <td><%= st_paddress %></td>
-                </tr>
-                <tr>
-                  <th width="30%">state</th>
-                  <td width="2%" class="colon">:</td>
-                  <td><%= st_state %></td>
-                </tr>
-                <tr>
-                  <th width="30%">Email</th>
-                  <td width="2%" class="colon">:</td>
-                  <td><%= st_mail %></td>
-                </tr>
-                <tr>
-                  <th width="30%">blood</th>
-                  <td width="2%" class="colon">:</td>
-                  <td>B+</td>
-                </tr>
-              </table>
-            </div>
-          </div>
-        </div>
+      </div>
+    </div>
+    <div class="right-column">
+      <div class="notice-board-title">General Information</div>
+      <table class="table1 table-bordered" style="width:92%; background-color: white; margin-left: 1rem;height: 84%;">
+        <tr>
+          <th width="30%">Roll</th>
+          <td width="2%" class="colon">:</td>
+          <td><%= st_id %></td>
+        </tr>
+        <tr>
+          <th width="30%">Date of birth</th>
+          <td width="2%" class="colon">:</td>
+          <td><%= st_dob %></td>
+        </tr>
+        <tr>
+          <th width="30%">Date of joining </th>
+          <td width="2%" class="colon">:</td>
+          <td><%= st_doj %></td>
+        </tr>
+        <tr>
+          <th width="30%">Gender</th>
+          <td width="2%" class="colon">:</td>
+          <td><%= st_gender %></td>
+        </tr>
+        <tr>
+          <th width="30%">Father's name</th>
+          <td width="2%" class="colon">:</td>
+          <td><%= st_fathername %></td>
+        </tr>
+        <tr>
+          <th width="30%">Mother's name</th>
+          <td width="2%" class="colon">:</td>
+          <td><%= st_mothername %></td>
+        </tr>
+        <tr>
+          <th width="30%">Permanent address</th>
+          <td width="2%" class="colon">:</td>
+          <td><%= st_paddress %></td>
+        </tr>
+        <tr>
+          <th width="30%">state</th>
+          <td width="2%" class="colon">:</td>
+          <td><%= st_state %></td>
+        </tr>
+        <tr>
+          <th width="30%">Email</th>
+          <td width="2%" class="colon">:</td>
+          <td><%= st_mail %></td>
+        </tr>
+        <tr>
+          <th width="30%">blood</th>
+          <td width="2%" class="colon">:</td>
+          <td>B+</td>
+        </tr>
+      </table>
+    </div>
+  </div>
       </div>
     </div>
   </div>
