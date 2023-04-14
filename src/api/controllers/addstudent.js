@@ -3,11 +3,12 @@ const path=require('path');
 const bodyparse=require('body-parser');
 const student=require('../models/studentmodel');
 const { hashfunction } = require('../models/hashfunctionmodel');
-const getDB=require('../../config/utils/database').getDB;
 const app=express.Router();
+
 
 //body parser 
 app.use(bodyparse.urlencoded({extended:true}));
+
 
 // getting data from addform
 app.post('/addform.html',(req,res,next)=>{

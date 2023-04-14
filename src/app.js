@@ -6,6 +6,7 @@ const mongoConnect=require('./config/utils/database').mongoConnect;
 const mongodbstore=require('connect-mongodb-session')(session);
 const addstudent=require('./api/controllers/addstudent');
 const routing_middleware=require('./api/middleware/routing_middleware');
+const addnotice=require('./api/controllers/addnotice');
 
 const anhour=1*60*60*1000;
 const app=express();
@@ -36,6 +37,9 @@ app.use(routing_middleware);
 
 // addstudentusingform
 app.use(addstudent);
+
+// addnotice
+app.use(addnotice);
 
 // incase if pagenotfound is reached
 app.use('/',(req,res,next)=>{

@@ -23,7 +23,7 @@ router.get('/createnotice',(req,res,next)=>{
                     res.sendFile(path.join(__dirname,'..','views','index.html'));
                 }else{
                     const student_details=studentrecord;
-                    console.log(`dash_board route is now in progress`);
+                    console.log(`notice route is now in progress`);
                     res.render('new_notice',{
                         st_fname:student_details.fname,
                         st_name:student_details.fname+' '+student_details.lname,
